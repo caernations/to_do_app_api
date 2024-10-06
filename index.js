@@ -3,14 +3,14 @@ const { createClient } = require('@supabase/supabase-js');
 require('dotenv').config();
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 const helmet = require('helmet');
 app.use(
     helmet.contentSecurityPolicy({
         directives: {
             defaultSrc: ["'self'"],
-            connectSrc: ["'self'", "http://localhost:3000"],
+            connectSrc: ["'self'", "http://localhost:3001"],
           },
         })
     );
